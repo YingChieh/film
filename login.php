@@ -13,6 +13,7 @@
         $success = $account->login($username,$password);
         if($success){
             // store session
+            $_SESSION["userLoggedIn"] = $username;
             header("Location: index.php");
         }
     }

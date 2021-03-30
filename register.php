@@ -18,6 +18,7 @@ require_once("includes/classes/Constants.php");
         $success = $account->register($firstName,$lastName,$username,$email,$email2,$password,$password2);
         if($success){
             // store session
+            $_SESSION["userLoggedIn"] = $username;
             header("Location: index.php");
         }
     }    
